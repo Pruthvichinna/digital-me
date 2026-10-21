@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.fastembed/
+data/private/
+API_KEY.txt
