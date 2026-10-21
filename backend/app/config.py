@@ -18,6 +18,13 @@ class Settings(BaseSettings):
     companion_api_key: str = ""
     public_rate_limit_per_min: int = 20
 
+    # Public-hosting controls
+    app_env: str = "development"          # "production" hides /docs
+    companion_enabled: bool = True        # set false on a public deployment
+    public_daily_limit: int = 80          # total public chats per UTC day (protects free LLM quota)
+    auth_fail_limit: int = 8              # wrong keys per IP per 10 minutes
+    fastembed_cache: str = ""             # folder to cache the embedding model in
+
     # RAG tuning
     chunk_size: int = 800
     chunk_overlap: int = 120
